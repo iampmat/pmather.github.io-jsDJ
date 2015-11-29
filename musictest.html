@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet" integrity="sha256-MfvZlkHCEqatNoGiOXveE8FIwMzZg4W85qfrfIFBfYc= sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="style.css">
+
+<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+<!--<script src="https://cdn.rawgit.com/katspaugh/wavesurfer.js/master/dist/wavesurfer.min.js"></script>-->
+<script src="wavesurfer.min.js"></script>
+
+<script src="custom.js"></script>
+
+<style>
+</style>
+</head>
+<body>
+<div class="header">
+	<img id="youtubeIcon" src="youtubeIcon.png">
+</div>
+
+
+<div class="container">
+	<div id="wave">
+		<div class="progress progress-striped active" id="progress-bar">
+            <div class="progress-bar progress-bar-info"></div>
+        </div>
+        
+	</div>
+	
+	<div class="col-md-4">
+		<button onclick="playSong1()" type="button">Play Song 1</button>
+		<button onclick="pauseSong1()" type="button">Pause Song 1</button><br> 
+		<input type="file" id="mFileInput1"/>
+		<br>
+		<h1>sound 1</h1>
+		<audio id="sound1" controls></audio>
+		<img id='image1'/>
+		<video id='video1'/>
+	</div>
+	
+	<div class="col-md-4">	
+	
+		<div id="singleSliders">
+	
+			<input  type="range" value="100" orient="vertical" name="points" min="0" max="100" id="volume1" class="vertSlider">
+			<input  type="range" value="100" orient="vertical" name="points" min="0" max="100" id="volume2" class="vertSlider">
+		</div>
+		<div>
+			<input  type="range" name="points" min="0" max="100" id="volumeBoth">
+		</div>
+	<!--onclick="adjustVol()"-->
+	</div>
+
+	<div class="col-md-4">
+		<button onclick="playSong2()" type="button">Play Song 2</button>
+		<button onclick="pauseSong2()" type="button">Pause Song 2</button><br> 
+		<input type="file" id="mFileInput2"/>
+		<br>
+		<h1>sound 2</h1>
+		<audio id="sound2" controls></audio>
+		<img id='image2'/>
+		<video id='video2'/>
+	</div>
+</div>
+	
+</body>
+</html>
